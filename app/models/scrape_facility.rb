@@ -1,0 +1,2 @@
+class ScrapeFacility < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ElementsLife < ApplicationRecord
+end

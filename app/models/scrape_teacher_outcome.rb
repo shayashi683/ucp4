@@ -1,0 +1,2 @@
+class ScrapeTeacherOutcome < ApplicationRecord
+end

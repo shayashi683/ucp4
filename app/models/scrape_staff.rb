@@ -1,0 +1,2 @@
+class ScrapeStaff < ApplicationRecord
+end

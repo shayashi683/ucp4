@@ -1,0 +1,2 @@
+class ElementsEdu < ApplicationRecord
+end

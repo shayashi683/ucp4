@@ -1,0 +1,2 @@
+class EvaluateInternational < ApplicationRecord
+end

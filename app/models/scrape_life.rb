@@ -1,0 +1,2 @@
+class ScrapeLife < ApplicationRecord
+end

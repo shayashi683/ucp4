@@ -1,0 +1,2 @@
+class ScrapeReview < ApplicationRecord
+end
