@@ -79,7 +79,7 @@
  /* ヘッダー ================================ */
  header {
    height: 64px;
-   position: absolute;
+   position: relative;
    top:0;
    z-index: 1;
    width: 100%;
@@ -137,6 +137,21 @@
    color: white;
    margin: 0;
    font-size: 13px;
+ }
+
+.header-icons{
+  float: right;
+  margin-right: 7.5%;
+}
+ .header-icons li{
+   float: left;
+   line-height: 64px;
+   padding-right: 20px;
+ }
+ .header-icons img{
+   width: 25px;
+   line-height: 64px;
+   vertical-align:  middle; 
  }
 
  /* top ================================ */
