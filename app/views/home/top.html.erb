@@ -6,7 +6,7 @@
 
     <div class="search-header__container">
         <div class="search-header__content">
-            <div class="search-header-title"><span><img src="ucp_logo_rect.png"></span>
+            <div class="search-header-title"><%= image_tag('/ucplogo_official.png') %>
             </div>
             <div class="search-header-meta">
               <div class="search-description">
@@ -43,15 +43,18 @@
         <li>
           <div class="card">
             <div class="faculty_title_box">
-                <a href="/rankings/ds"><h2>データサイエンス学部</h2></a>
-            </div><br>
+              <div class="rankings_toppage">
+                <a href="/rankings/ds"> <%= @faculties_1.rankings_name %></a>
+              </div>
+            </div>
+            <br>
             <div class="faculty_contents">
               <div class="faculty_illustration">
                 <img src="title_header_ds.png">
               </div>
               <div class="card_inner" href="/rankings/ds">
-                <p>データサイエンスとは、社会に溢れているデータから《価値》を引き出す学問です。ICT(情報通信技術)の進化した現代では、あらゆるビジネスや医療、教育、行政等においても、高度なデータ処理能力、データ分析力が必要となっています。データから有益なく《価値》を引き出すためには、これらの能力に加え、様々な分析経験を積むことが求められています。</p>
-                <a href="/rankings/ds"> ・・・ランキングを見る</a>
+                <%= @faculties_1.intro %>
+                <br><a href="/rankings/ds"> ・・・ランキングを見る</a>
               </div>
             </div>
           </div>
@@ -59,14 +62,18 @@
         <li>
           <div class="card">
             <div class="faculty_title_box">
-                <h2>グローバル</h2>
-            </div><br>
+              <div class="rankings_toppage">
+                <a href="/rankings/ds"> <%= @faculties_2.rankings_name %></a>
+              </div>
+            </div>
+            <br>
             <div class="faculty_contents">
               <div class="faculty_illustration">
-                <img src="ucp_logo_circ.png">
+                <img src="ucplogo_official.png">
               </div>
               <div class="card_inner" href="/rankings/ds">
-                <p>Coming Soon...</p>
+                <%= @faculties_2.intro %>
+                <br><a href="/rankings/ds"> ・・・ランキングを見る</a>
               </div>
             </div>
           </div>
@@ -74,14 +81,18 @@
         <li>
           <div class="card">
             <div class="faculty_title_box">
-                <h2>経済・経営・商学部</h2>
-            </div><br>
+              <div class="rankings_toppage">
+                <a href="/rankings/ds"> <%= @faculties_3.rankings_name %></a>
+              </div>
+            </div>
+            <br>
             <div class="faculty_contents">
               <div class="faculty_illustration">
-                <img src="ucp_logo_circ.png">
+                <img src="ucplogo_official.png">
               </div>
               <div class="card_inner" href="/rankings/ds">
-                <p>Coming Soon...</p>
+                <%= @faculties_3.intro %>
+                <br><a href="/rankings/ds"> ・・・ランキングを見る</a>
               </div>
             </div>
           </div>
