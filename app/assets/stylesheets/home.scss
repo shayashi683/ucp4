@@ -11,7 +11,6 @@
     width:auto;
     position: relative;
       top: 64px;
-    z-index: 0;
 }
 div {
     display: block;
@@ -119,6 +118,7 @@ div {
   background-color: white;
   position: relative;
 }
+/* rankings */
 .rankings_container{
   height: auto;
   width: 90%;
@@ -190,6 +190,7 @@ div {
 }
 /* picks */
 .picks_container{
+  position: relative;
   width: 85%;
   max-width: 1080px;
   margin: 20px auto 100px auto;
@@ -205,8 +206,6 @@ div {
 }
 .articles_container{
       overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
 }
 .articles_container li{
       display: inline-block;
@@ -218,4 +217,19 @@ div {
 .articles_container img{
   width: 70%;
   margin: auto;
+}
+.card h3{
+  padding: 5px 15px 5px 15px;
+  font-size: medium;
+}
+.see_articles{
+  position: absolute;
+	bottom: 30px;
+  right: 10%;
+}
+.see_articles a{
+  background: #0066CC; /*背景色*/
+  padding: 0.5em;/*文字周りの余白*/
+  color: white;/*文字を白に*/
+  border-radius: 0.5em;/*角の丸み*/
 }
