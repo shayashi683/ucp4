@@ -196,6 +196,7 @@ div {
   margin: 20px auto 100px auto;
   background-color: white;
   text-align: center;
+  padding-bottom: 100px;
 }
 .picks_container h1{
   text-align: center;
@@ -206,13 +207,14 @@ div {
 }
 .articles_container{
       overflow-x: auto;
+      position: relative;
 }
 .articles_container li{
-      display: inline-block;
-      width: 30%;
-      height: 150px;
-      margin: 16px;
-      font-size: 48px;
+    display: inline-block;
+    width: 30%;
+    height: 150px;
+    margin: 16px;
+    font-size: 48px;
 }
 .articles_container img{
   width: 70%;
