@@ -108,7 +108,7 @@
 /*Content*/
 .rankings2020_container{
   height: auto;
-  width: 80%;
+  width: 60%;
   margin: auto;
   background-color: white;
   font-family: 'Hiragino Mincho ProN';
@@ -121,6 +121,7 @@
 .rankings2020_lists{
 width: 100%;
 display: flex;
+margin-left: 10%;
 }
 .rankings2020_container_left{
  width: 50%;
@@ -143,21 +144,18 @@ display: flex;
 }
 
 .menu a {
-    padding: 15px;
-    vertical-align: middle;
     text-decoration: none;
     color: #000;
 }
 
 label {
     display: block;
-    vertical-align: middle;
     margin: 0 0 4px 0;
     padding : 15px;
     padding-left: 15px;
     line-height: 1;
     width: 40%;
-    border-bottom: medium 2px #707070;
+    border-bottom: solid 2px #707070;
     cursor :pointer;
 }
 
@@ -168,9 +166,11 @@ input {
 
 .menu ul {
     margin: 0;
-    padding: 0;
+    padding-left: 10%;
+    padding-top: 5%;
     background :#f4f4f4;
     list-style: none;
+    width: 80%;
 }
 
 .menu li {
