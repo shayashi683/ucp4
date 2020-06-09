@@ -47,7 +47,7 @@
 .rankings-description h1{
   font-family: 'Hiragino Mincho ProN';
   padding: 0 0 10px 0;
-    text-align: center;
+  text-align: center;
 }
 .overflow-text__content p{
   float: left;
@@ -118,6 +118,16 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.rankings2020_lists{
+width: 100%;
+display: flex;
+}
+.rankings2020_container_left{
+ width: 50%;
+}
+.rankings2020_container_right{
+ width: 50%;
+}
 .rankings2020_container h1{
   text-align: center;
   padding: 30px auto;
@@ -129,30 +139,31 @@
   font-family: "ヒラギノ丸ゴ ProN"
 }
 .menu {
-    max-width: 60%;
-    margin: auto;
+  margin: auto;
 }
 
 .menu a {
-    display: block;
     padding: 15px;
+    vertical-align: middle;
     text-decoration: none;
     color: #000;
 }
 
 label {
     display: block;
+    vertical-align: middle;
     margin: 0 0 4px 0;
     padding : 15px;
     padding-left: 15px;
     line-height: 1;
-    color :#fff;
-    background : #ffd700;
+    width: 40%;
+    border-bottom: medium 2px #707070;
     cursor :pointer;
 }
 
 input {
-    display: none;
+  display: none;
+  width: auto;
 }
 
 .menu ul {
