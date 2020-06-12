@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_070020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "rankings_name", limit: 255
+    t.text "intro"
   end
 
   create_table "rankings", force: :cascade do |t|
