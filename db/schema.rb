@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 2020_06_01_093358) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "elements_edus", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
