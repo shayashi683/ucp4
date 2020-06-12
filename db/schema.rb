@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_070020) do
+ActiveRecord::Schema.define(version: 2020_06_12_110233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 2020_06_02_070020) do
     t.decimal "z_life_grade", comment: "5.0%"
     t.decimal "z_review_grade", comment: "10.0%"
     t.integer "established_year"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "rankings_name", limit: 255
+    t.text "intro"
   end
 
   create_table "elements_edus", id: :bigint, default: -> { "nextval('evaluate_edus_id_seq'::regclass)" }, force: :cascade do |t|
@@ -142,13 +149,6 @@ ActiveRecord::Schema.define(version: 2020_06_02_070020) do
     t.decimal "teachers_diversity", comment: "(5.0%)\n(=faculty_foreign_teacher/\nelements_edu.faculty_teacher_n)"
     t.decimal "teachers_gender", comment: "(faculty_women_teacher_n/\nelements_edu.faculty_teacher_n)"
     t.decimal "staff_grade"
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "rankings_name", limit: 255
-    t.text "intro"
   end
 
   create_table "rankings", force: :cascade do |t|
