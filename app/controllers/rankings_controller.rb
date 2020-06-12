@@ -1,10 +1,5 @@
 class RankingsController < ApplicationController
-  def top
-  end
-
-  def ds
-  end
-
-  def college1
+  def show
+    @category= Categories.find_by(id:params[:id])
   end
 end
