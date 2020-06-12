@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_06_12_110233) do
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "rankings_name", limit: 255
+    t.string "category_name", limit: 255
     t.text "intro"
   end
 
