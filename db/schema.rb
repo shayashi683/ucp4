@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_06_12_132129) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category_name", limit: 255
+    t.text "intro"
   end
 
   create_table "elements_edus", force: :cascade do |t|
