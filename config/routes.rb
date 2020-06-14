@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get "/categories/:id" => "categories#show"
 
+  get "/rankings/index" => "rankings#index"
+
   get "/picks" => "picks#top"
 
   root 'comments#index'
