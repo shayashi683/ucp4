@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   get "/" => "home#top"
   get "home/about" => "home#about"
-
+  
+  get "/categories/" => "categories#top"
   get "/categories/:id" => "categories#show"
 
+  get "/rankings/top" => "rankings#top"
   get "/rankings/index" => "rankings#index"
 
   get "/picks" => "picks#top"
