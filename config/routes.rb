@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get "/rankings/top" => "rankings#top"
   get "/rankings/index" => "rankings#index"
+  get "/rankings/college_faculty_1" => "rankings#college_faculty_1"
 
   get "/picks" => "picks#top"
 

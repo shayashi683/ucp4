@@ -2,71 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* College1*/
+/* college_faculty_1*/
 .platform__wrapper{
     font-weight: 400;
     color: #464646;
     margin: 0;
     padding: 0;
     line-height: 1.4;
-    width: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
     position: relative;
       top: 64px;
 }
-.profile {
-    font-weight: 400;
-    color: #464646;
-    background: #e6e6e6;
-    margin: 0;
-    padding: 0;
-    line-height: 1.4;
+
+.title_head_container{
+    width: 100%;
+    border-bottom: 1px solid #707070;
+    border-right: 1px solid #707070; 
+    border-left: 1px solid #707070;   
+    margin-bottom: 10px;
+}
+.head_image img{
+    width: 100%;
+    height: 180px;
     position: relative;
-    top: 64px;
-    z-index: 0;
 }
-.profile-header__blocks {
-    position: relative;
-    z-index: 2;
-}
-.profile-blocks {
-    -webkit-box-flex: 1;
-    flex: 1 0;
-}
-.postcard--responsive {
-    width: auto;
-    max-width: 1080px;
-    border-radius: 0;
-}
-.postcard {
+.college_type{
+    font-size: 20px;
     background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    -webkit-box-flex: 1;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-.postcard__image-container{
-  position: relative;
-  overflow: hidden;
-  height: 34vw;
-  max-height: 350px;
-}
-.postcard__image-container {
-  background-image: url("/ShigaUniv_Hikone_AssemblyHall01.png");
-  position: relative;
-  overflow: hidden;
-}
-.postcard__figure__image {
-    background: #eee;
-    background-size: cover;
-    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 20px 5px 20px;
+    height: 25px;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -50px;
-    z-index: 1;
+        top: 156px;
+        left: 5%;
 }
+.faculty_info{
+    padding-left: 5%;
+}
+.rankings_position{
+    font-size: 20px;
+    color: #53A63A;
+    padding-top: 5px;
+}
+.rankings_category{
+    font-size: 20px;
+    color: #53A63A;
+    padding-top: 5px;
+}
+.faculty_info h1{
+    color: #2C33F6;
+}
+.faculty_info_option{
+    position: absolute;
+        top: 75%;
+        left: 80%;
+    text-align: right;
+    margin-right: 5px;
+}
+.faculty_hp{
+    text-align: center;
+    font-size: 15px;
+    color: #707070;
+    text-decoration: underline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 3px solid #707070;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.mylist{
+    text-align: center;
+    font-size: 13px;
+    color: #707070;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 3px solid #707070;
+    border-radius: 10px;
+}
+i {
+    padding-top: 10px;
+    font-size: 2em;
+    color: rgb(224, 0, 0);
+    }

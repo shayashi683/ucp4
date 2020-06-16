@@ -12,8 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 @import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
  * {
    box-sizing: border-box;
@@ -140,7 +143,6 @@
 
 .header-icons{
   float: right;
-  margin-right: 7.5%;
 }
  .header-icons li{
    float: left;
