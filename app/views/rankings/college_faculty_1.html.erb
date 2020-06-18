@@ -64,48 +64,53 @@
       <%= "××大学○○学部"%>
     </div>
     <div class="about_intro">
-      <%= "設置 20××年"%>
+      <%= "設置 20××年"%><br>
       <%= "学部内容:_______________________________________________________
 _______________________________________________________________"%>
     </div>
     <div class="about_detail">
-      <div class="detail_left">
-        <%= "男:女  6:4"%>
-        <%= "取れる資格数 20" %>
-      </div>
-      <div class="detail_right">
-        <%= "学生:教職員 10:1"%>
-        <%= "留年率　2.1%"%>
-      </div>
+        <div class="detail_left">
+          <%= "男:女  6:4"%><br>
+          <%= "取れる資格数 20" %>
+        </div>
+        <div class="detail_right">
+          <%= "学生:教職員 10:1"%><br>
+          <%= "留年率　2.1%"%>
+        </div>
     </div>
   </div>
 
   <div class="adm_container">
-    <div class="adm_container_left">
-      <p>入学制度</p>
-      <ul>
-      <li>・Test Type A</li>
-      <li>・Test Type B</li>
-      <li>・Test Type C</li>
-      </ul>
-    </div>
-    <div class="adm_container_right">
-      <li>2.1倍</li>
-      <li>2.5倍</li>
-      <li>1.8倍</li>
-    </div>
-    <a>詳しくみる</a>
+      <p class="adm_title">入学制度</p>
+      <p class="rate">倍率</p>
+      <div class="adm_container_in">
+        <div class="adm_container_left">
+          <ul>
+          <li>・Test Type A</li>
+          <li>・Test Type B</li>
+          <li>・Test Type C</li>
+          </ul>
+        </div>
+        <div class="adm_container_right">
+          <li>2.1倍</li>
+          <li>2.5倍</li>
+          <li>1.8倍</li>
+        </div>
+      </div>
+    <a><%= fa_icon("arrow-circle-right") %>詳しくみる</a>
   </div>
 
   <div class="cost_container">
     <p>費用</p>
-    <div class="cost_container_left">
-      <%= "4年総計"%>
-      <%= "¥2,053,214"%>
-    </div>
-    <div class="cost_container_right">
-      <%= "年間平均学費　¥600,000"%>
-      <%= "奨学金制度について"%>
+    <div class="cost_container_in">
+      <div class="cost_container_left">
+        <p>4年総計</p> <br>
+        <p class="cost_four">¥2,053,214</p>
+      </div>
+      <div class="cost_container_right">
+        <p>年間平均学費 ¥600,000</p><br>
+        <p><%= fa_icon("arrow-circle-right") %>奨学金制度について</p>
+      </div>
     </div>
   </div>
 
