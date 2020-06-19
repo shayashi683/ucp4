@@ -492,3 +492,10 @@ footer {
     margin-top: 10px;
   }
 }
+
+ /* login_background.html.erb ================================ */
+.login_page_wrapper{
+  background-image: url('/users_page_cover.png');
+  height: 800px;
+  background-size: cover;
+}
