@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .platform__wrapper{
-    background: image-url(/users_page_cover.png)
-    width: cover;
+    background-image: url("/users_page_cover.png");
+    background-size: cover;
+    height: 100px;
+    z-index: 1;
+} 
+.platform__wrapper p{
+    font-size: 500px;
 }

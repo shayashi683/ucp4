@@ -494,8 +494,10 @@ footer {
 }
 
  /* login_background.html.erb ================================ */
-.login_page_wrapper{
-  background-image: url('/users_page_cover.png');
+.login_page_wrapper img{
   height: 800px;
   background-size: cover;
+}
+.login_page_wrapper p{
+  font-size: ;
 }
