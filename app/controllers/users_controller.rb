@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def login
-    render layout:"login_background.html.erb"
+    render :layout => nil
   end
 end
