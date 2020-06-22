@@ -1,0 +1,2 @@
+class CollegesFaculty < ApplicationRecord
+end

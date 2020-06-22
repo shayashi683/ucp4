@@ -1,0 +1,14 @@
+class CreateEvaluateFacilities < ActiveRecord::Migration[5.2]
+  def change
+    create_table :evaluate_facilities do |t|
+      t.integer :colleges_faculties_id
+      t.integer :facility_expenditure
+      t.integer :institution_expenditure
+      t.integer :own_books
+      t.decimal :facility_repu
+      t.decimal :facility_grade
+
+      t.timestamps
+    end
+  end
+end
