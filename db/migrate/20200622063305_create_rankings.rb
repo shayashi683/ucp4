@@ -5,7 +5,6 @@ class CreateRankings < ActiveRecord::Migration[5.2]
       t.integer :established_year
       t.text :place
       t.decimal :total_grade
-      t.decimal :competition_rate
       t.decimal :cost
       t.decimal :center_point
 
@@ -13,3 +12,4 @@ class CreateRankings < ActiveRecord::Migration[5.2]
     end
   end
 end
+s

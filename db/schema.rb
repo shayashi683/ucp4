@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 2020_06_22_063648) do
   create_table "evaluate_costs", force: :cascade do |t|
     t.integer "colleges_faculties_id"
     t.integer "tuition"
-    t.integer "future_income"
+    t.integer "employment_rate"
     t.integer "scholarship"
     t.decimal "cost_grade"
     t.datetime "created_at", null: false
@@ -175,7 +175,6 @@ ActiveRecord::Schema.define(version: 2020_06_22_063648) do
     t.integer "established_year"
     t.text "place"
     t.decimal "total_grade"
-    t.decimal "competition_rate"
     t.decimal "cost"
     t.decimal "center_point"
     t.datetime "created_at", null: false
