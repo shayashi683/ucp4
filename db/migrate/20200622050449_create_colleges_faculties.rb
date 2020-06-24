@@ -1,8 +1,8 @@
 class CreateCollegesFaculties < ActiveRecord::Migration[5.2]
   def change
     create_table :colleges_faculties do |t|
-      t.integer :colleges_id
-      t.integer :faculties_id
+      t.references :college, foreing_key: true
+      t.references :faculty, foreign_key: true
 
       t.timestamps
     end

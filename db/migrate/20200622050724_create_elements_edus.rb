@@ -1,7 +1,7 @@
 class CreateElementsEdus < ActiveRecord::Migration[5.2]
   def change
     create_table :elements_edus do |t|
-      t.integer :evaluste_edu_id
+      t.references :evaluate_staff, foreign_key: true
       t.integer :faculty_student_n
       t.integer :faculty_teacher_n
       t.integer :apply_n

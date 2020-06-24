@@ -1,7 +1,7 @@
 class CreateElementsStaffs < ActiveRecord::Migration[5.2]
   def change
     create_table :elements_staffs do |t|
-      t.integer :evaluate_staff_id
+      t.references :colleges_faculty, foreign_key: true
       t.integer :teacher_expense
       t.integer :staff_expense
       t.integer :college_teacher_n

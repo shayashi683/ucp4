@@ -1,7 +1,7 @@
 class CreateAssessments < ActiveRecord::Migration[5.2]
   def change
     create_table :assessments do |t|
-      t.integer :colleges_faculties_id
+      t.references :colleges_faculty, foreign_key: true
       t.decimal :z_education_grade
       t.decimal :z_cost_grade
       t.decimal :z_staff_grade

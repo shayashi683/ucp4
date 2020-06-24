@@ -1,7 +1,7 @@
 class CreateEvaluateLives < ActiveRecord::Migration[5.2]
   def change
     create_table :evaluate_lives do |t|
-      t.integer :colleges_faculties_id
+      t.references :colleges_faculty, foreign_key: true
       t.decimal :region_diversity
       t.decimal :gender_diversity
       t.integer :clubs

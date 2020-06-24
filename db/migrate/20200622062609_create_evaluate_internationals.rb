@@ -1,7 +1,7 @@
 class CreateEvaluateInternationals < ActiveRecord::Migration[5.2]
   def change
     create_table :evaluate_internationals do |t|
-      t.integer :colleges_faculties_id
+      t.references :colleges_faculty, foreign_key: true
       t.integer :coop_schools
       t.integer :shortstudy_programs
       t.integer :faculty_partnerschool

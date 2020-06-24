@@ -1,6 +1,7 @@
 class CreateEvaluateEdus < ActiveRecord::Migration[5.2]
   def change
     create_table :evaluate_edus do |t|
+      t.references :colleges_faculty, foreign_key: true
       t.decimal :curriculum_points
       t.decimal :relationwc
       t.decimal :raitio_st
