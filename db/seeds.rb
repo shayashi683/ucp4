@@ -20,3 +20,4 @@ end
     Faculty.create(:faculty_name => "学部#{index}")
 end
 
+Colleges_faculty.create(:colleges_id => "1", :faculties_id => "1")
