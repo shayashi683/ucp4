@@ -9,15 +9,15 @@
 # coding: utf-8
 
 2.times do |index| 
-    Category.create(:category_name => "カテゴリー#{index}", :intro => "イントロ#{index}")
+    Category.create!(:category_name => "カテゴリー#{index}", :intro => "イントロ#{index}")
 end
 
 4.times do |index| 
-    College.create(:college_name => "大学#{index}", :college_type => "国立")
+    College.create!(:college_name => "大学#{index}", :college_type => "国立")
 end
 
 4.times do |index| 
-    Faculty.create(:faculty_name => "学部#{index}")
+    Faculty.create!(:faculty_name => "学部#{index}")
 end
 
-Colleges_faculty.create(:colleges_id => "1", :faculties_id => "1")
+Colleges_faculty.create(:colleges_id => 1, :faculties_id => 1)
