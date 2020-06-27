@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2020_06_22_063648) do
   end
 
   create_table "colleges_faculties", force: :cascade do |t|
-    t.integer "colleges_id"
-    t.integer "faculties_id"
+    t.integer "college_id"
+    t.integer "faculty_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -218,8 +218,8 @@ ActiveRecord::Schema.define(version: 2020_06_22_063648) do
   end
 
   add_foreign_key "assessments", "colleges_faculties", column: "colleges_faculties_id", name: "assessments_colleges_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "colleges_faculties", "colleges", column: "colleges_id", name: "colleges_faculties_colleges_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "colleges_faculties", "faculties", column: "faculties_id", name: "colleges_faculties_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "colleges_faculties", "colleges", name: "colleges_faculties_colleges_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "colleges_faculties", "faculties", name: "colleges_faculties_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_edus", "evaluate_edus", column: "evaluste_edu_id", name: "elements_edus_evaluste_edu_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_lives", "evaluate_lives", name: "elements_lives_evaluate_life_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_staffs", "elements_staffs", column: "evaluate_staff_id", name: "elements_staffs_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade

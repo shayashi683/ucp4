@@ -9,8 +9,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: unicode
-  username: ucpdb
-  password:
+  username: <%= ENV['ucpdb'] %>
+  password: <%= ENV['ucp_owner'] %>
   host: localhost
 
 development:
@@ -27,4 +27,4 @@ test:
 production:
   <<: *default
   database: ucpdb_production
-  username: ucpdb
+  username: <%= ENV['ucpdb'] %>
