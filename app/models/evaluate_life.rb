@@ -1,5 +1,5 @@
 class EvaluateLife < ApplicationRecord
-    belongs_to :assessment
-    has_many :elements_lives
-    has_many :scrape_lives
+    belongs_to :assessment, optional: true
+    has_one :elements_lives
+    has_one :scrape_lives
 end

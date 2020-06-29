@@ -1,4 +1,4 @@
 class EvaluateReview < ApplicationRecord
-    belongs_to :assessment
-    has_many :scrape_reviews
+    belongs_to :assessment, optional: true
+    has_one :scrape_reviews
 end
