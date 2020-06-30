@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "category_name"
+  create_table "categories", id: :serial, force: :cascade do |t|
+    t.string "category_name", limit: 255
     t.text "intro"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -195,38 +195,24 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
     t.integer "evaluate_life_id"
   end
 
-  create_table "scrape_reviews", force: :cascade do |t|
+  create_table "scrape_reviews", id: :serial, force: :cascade do |t|
     t.integer "evaluate_review_id"
     t.decimal "scrape_repu_review"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
-  create_table "scrape_staffs", force: :cascade do |t|
+  create_table "scrape_staffs", id: :serial, force: :cascade do |t|
     t.integer "evaluate_staff_id"
     t.decimal "scrape_repu_teacher"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
-  create_table "scrape_teacher_outcomes", force: :cascade do |t|
+  create_table "scrape_teacher_outcomes", id: :serial, force: :cascade do |t|
     t.integer "evaluate_staff_id"
     t.decimal "scrape_outcome_teacher"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
-  create_table "scrape_the", id: :serial, force: :cascade do |t|
+  create_table "scrape_thes", id: :serial, force: :cascade do |t|
     t.integer "evaluate_international_id"
-    t.text "scrape_the"
-  end
-
-  create_table "scrape_thes", force: :cascade do |t|
-    t.bigint "evaluate_international_id"
     t.decimal "scrape_the"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["evaluate_international_id"], name: "index_scrape_thes_on_evaluate_international_id"
   end
 
   add_foreign_key "assessments", "colleges_faculties", name: "assessments_colleges_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
@@ -234,7 +220,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
   add_foreign_key "colleges_faculties", "faculties", name: "colleges_faculties_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_edus", "evaluate_edus", name: "elements_edus_evaluste_edu_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_lives", "evaluate_lives", name: "elements_lives_evaluate_life_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "elements_staffs", "elements_staffs", column: "evaluate_staff_id", name: "elements_staffs_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "elements_staffs", "evaluate_staffs", name: "elements_staffs_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "evaluate_costs", "colleges_faculties", name: "evaluate_costs_colleges_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "evaluate_edus", "colleges_faculties", name: "evaluate_edus_colleges_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "evaluate_facilities", "colleges_faculties", name: "evaluate_facilities_colleges_faculties_id_fkey", on_update: :cascade, on_delete: :cascade
@@ -246,8 +232,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
   add_foreign_key "scrape_facilities", "evaluate_facilities", name: "scrape_facilities_evaluate_facility_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "scrape_lives", "evaluate_lives", name: "scrape_lives_evaluate_life_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "scrape_reviews", "evaluate_reviews", name: "scrape_reviews_evaluate_review_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "scrape_staffs", "elements_staffs", column: "evaluate_staff_id", name: "scrape_staffs_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "scrape_teacher_outcomes", "elements_staffs", column: "evaluate_staff_id", name: "scrape_teacher_outcomes_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "scrape_the", "evaluate_internationals", name: "scrape_the_evaluate_international_id_fkey", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "scrape_thes", "evaluate_internationals"
+  add_foreign_key "scrape_staffs", "evaluate_staffs", name: "scrape_staffs_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "scrape_teacher_outcomes", "evaluate_staffs", name: "scrape_teacher_outcomes_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "scrape_thes", "evaluate_internationals", name: "scrape_thes_evaluate_international_id_fkey", on_update: :cascade, on_delete: :cascade
 end
