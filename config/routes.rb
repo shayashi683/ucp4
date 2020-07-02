@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/categories" => "categories#top"
   get "/categories/:id" => "categories#show"
 
-  get "/rankings/top" => "rankings#top"
+  get "/rankings" => "rankings#top"
   get "/rankings/index" => "rankings#index"
   get "/rankings/college_faculty_1" => "rankings#college_faculty_1"
 
