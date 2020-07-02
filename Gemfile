@@ -41,7 +41,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 # gem 'sqlite3', '~> 1.3.6' 変更
 gem 'pg'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.4.1'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 group :development, :test do
