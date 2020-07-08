@@ -4,9 +4,9 @@ class CreateEvaluateEdus < ActiveRecord::Migration[5.2]
       t.references :colleges_faculty, foreign_key: true
       t.decimal :curriculum_points
       t.decimal :relationwc
-      t.decimal :raitio_st
+      t.decimal :ratio_st
       t.decimal :competition_rate
-      t.decimal :raitio_adm
+      t.decimal :ratio_adm
       t.decimal :susp_drop
       t.decimal :income
       t.decimal :qualification

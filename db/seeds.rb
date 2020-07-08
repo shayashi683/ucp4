@@ -77,24 +77,48 @@ ElementsEdu.create!(:evaluate_edu_id => 4, :faculty_student_n => 1230, :faculty_
 
 ScrapeStaff.create!(:evaluate_staff_id => 1)
 ScrapeStaff.create!(:evaluate_staff_id => 2)
+ScrapeStaff.create!(:evaluate_staff_id => 3)
+ScrapeStaff.create!(:evaluate_staff_id => 4)
 
 ScrapeTeacherOutcome.create!(:evaluate_staff_id => 1)
 ScrapeTeacherOutcome.create!(:evaluate_staff_id => 2)
+ScrapeTeacherOutcome.create!(:evaluate_staff_id => 3)
+ScrapeTeacherOutcome.create!(:evaluate_staff_id => 4)
 
-ElementsStaff.create!(:evaluate_staff_id => 1, :teacher_expense => 176, :staff_expense => 155, :college_teacher_n => 400, :college_staff_n => 374, :faculty_foreign_teacher_n => 3, :faculty_female_teacher_n => 4)
-ElementsStaff.create!(:evaluate_staff_id => 2, :teacher_expense => 72, :staff_expense => 45, :college_teacher_n => 40, :college_staff_n => 34, :faculty_foreign_teacher_n => 5, :faculty_female_teacher_n => 6)
+ElementsStaff.create!(:evaluate_staff_id => 1, :teacher_expense => 17600, :staff_expense => 15500, :college_teacher_n => 400, :college_staff_n => 374, :faculty_foreign_teacher_n => 3, :faculty_female_teacher_n => 4)
+ElementsStaff.create!(:evaluate_staff_id => 2, :teacher_expense => 7200, :staff_expense => 4500, :college_teacher_n => 67, :college_staff_n => 34, :faculty_foreign_teacher_n => 5, :faculty_female_teacher_n => 6)
+ElementsStaff.create!(:evaluate_staff_id => 3, :teacher_expense => 12300, :staff_expense => 6900, :college_teacher_n => 99, :college_staff_n => 80, :faculty_foreign_teacher_n =>16, :faculty_female_teacher_n => 10)
+ElementsStaff.create!(:evaluate_staff_id => 4, :teacher_expense => 9900, :staff_expense => 9000, :college_teacher_n => 80, :college_staff_n => 99, :faculty_foreign_teacher_n => 8, :faculty_female_teacher_n => 8)
 
 ScrapeFacility.create!(:evaluate_facility_id => 1)
 ScrapeFacility.create!(:evaluate_facility_id => 2)
+ScrapeFacility.create!(:evaluate_facility_id => 3)
+ScrapeFacility.create!(:evaluate_facility_id => 4)
 
 ScrapeThe.create!(:evaluate_international_id => 1)
 ScrapeThe.create!(:evaluate_international_id => 2)
+ScrapeThe.create!(:evaluate_international_id => 3)
+ScrapeThe.create!(:evaluate_international_id => 4)
 
 ElementsLife.create!(:evaluate_life_id => 1, :the_region_student_n => 30,:female_student_n => 60)
 ElementsLife.create!(:evaluate_life_id => 2, :the_region_student_n => 20,:female_student_n => 30)
+ElementsLife.create!(:evaluate_life_id => 3, :the_region_student_n => 26,:female_student_n => 24)
+ElementsLife.create!(:evaluate_life_id => 4, :the_region_student_n => 40,:female_student_n => 55)
 
 ScrapeLife.create!(:evaluate_life_id => 1)
 ScrapeLife.create!(:evaluate_life_id => 2)
+ScrapeLife.create!(:evaluate_life_id => 3)
+ScrapeLife.create!(:evaluate_life_id => 4)
 
 ScrapeReview.create!(:evaluate_review_id => 1)
 ScrapeReview.create!(:evaluate_review_id => 2)
+ScrapeReview.create!(:evaluate_review_id => 3)
+ScrapeReview.create!(:evaluate_review_id => 4)
+
+EvaluateEdu.update_all_ratio_st
+EvaluateEdu.update_all_competition_rate
+EvaluateEdu.update_all_ratio_adm
+EvaluateEdu.update_all_susp_drop
+
+EvaluateStaff.update_all_salary_staff
+EvaluateStaff.update_all_teachers_diversity
