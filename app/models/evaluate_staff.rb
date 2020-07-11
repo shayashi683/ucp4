@@ -3,6 +3,7 @@ class EvaluateStaff < ApplicationRecord
     has_one :scrape_staff
     has_one :scrape_teacher_outcome
     has_one :elements_staff
+    has_one :elements_edu
 
     def self.update_all_salary_staff
         all.each do |evaluate_staff|
@@ -19,7 +20,7 @@ class EvaluateStaff < ApplicationRecord
         end
      end
     def calc_teachers_diversity
-        self.elements_staff.faculty_foreign_teacher_n/ self.elements_edu.faculty_teacher_n
+        self.elements_staff.faculty_foreign_teacher_n/ self.elements_edu.faculty_teacher_n * 100
     end
 
 end
