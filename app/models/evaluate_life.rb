@@ -6,11 +6,11 @@ class EvaluateLife < ApplicationRecord
 
     def self.update_all_region_diversity
         all.each do |evaluate_life|
-            evaluate_life.update(region_diversity: evaluate_life.region_diversity)
+            evaluate_life.update(region_diversity: evaluate_life.calc_region_diversity)
         end
      end
     def calc_region_diversity
-        100*(1-(elements_life.the_region_student_n/elements_edu.faculty_students_n))
+       100 - (100 * elements_life.the_region_student_n/elements_edu.faculty_student_n)
     end
 
 

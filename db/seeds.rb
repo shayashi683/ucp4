@@ -8,7 +8,7 @@
 
 # coding: utf-8
 
-2.times do |index| 
+3.times do |index| 
     Category.create!(:category_name => "カテゴリー#{index}", :intro => "イントロ#{index}")
 end
 
