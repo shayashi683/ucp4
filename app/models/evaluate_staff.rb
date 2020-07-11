@@ -20,7 +20,16 @@ class EvaluateStaff < ApplicationRecord
         end
      end
     def calc_teachers_diversity
-        self.elements_staff.faculty_foreign_teacher_n/ self.elements_edu.faculty_teacher_n * 100
+        self.elements_staff.faculty_foreign_teacher_n * 100/ self.elements_edu.faculty_teacher_n
+    end
+
+    def self.update_all_teachers_gender
+        all.each do |evaluate_staff|
+            evaluate_staff.update(teachers_gender: evaluate_staff.calc_teachers_gender)
+        end
+     end
+    def calc_teachers_gender
+        self.elements_staff.faculty_female_teacher_n * 100/ self.elements_edu.faculty_teacher_n
     end
 
 end

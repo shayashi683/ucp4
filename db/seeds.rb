@@ -70,10 +70,10 @@ EvaluateReview.create!(:colleges_faculty_id => 2)
 EvaluateReview.create!(:colleges_faculty_id => 3)
 EvaluateReview.create!(:colleges_faculty_id => 4)
 
-ElementsEdu.create!(:evaluate_edu_id => 1, :evaluate_staff_id => 1, :faculty_student_n => 1268, :faculty_teacher_n => 27, :apply_n => 1152, :admin_n => 319, :entry_n => 294, :college_delay_n => 58, :college_student_n => 30602)
-ElementsEdu.create!(:evaluate_edu_id => 2, :evaluate_staff_id => 2, :faculty_student_n => 268, :faculty_teacher_n => 17, :apply_n => 352, :admin_n => 70, :entry_n => 64, :college_delay_n => 24, :college_student_n => 3602)
-ElementsEdu.create!(:evaluate_edu_id => 3, :evaluate_staff_id => 3, :faculty_student_n => 300, :faculty_teacher_n => 37, :apply_n => 300, :admin_n => 40, :entry_n => 194, :college_delay_n => 128, :college_student_n => 2020)
-ElementsEdu.create!(:evaluate_edu_id => 4, :evaluate_staff_id => 4, :faculty_student_n => 1230, :faculty_teacher_n => 67, :apply_n => 900, :admin_n => 200, :entry_n => 93, :college_delay_n => 48, :college_student_n => 3003)
+ElementsEdu.create!(:evaluate_edu_id => 1, :evaluate_staff_id => 1, :evaluate_life_id => 1,:faculty_student_n => 1268, :faculty_teacher_n => 27, :apply_n => 1152, :admin_n => 319, :entry_n => 294, :college_delay_n => 58, :college_student_n => 30602)
+ElementsEdu.create!(:evaluate_edu_id => 2, :evaluate_staff_id => 2, :evaluate_life_id => 2, :faculty_student_n => 268, :faculty_teacher_n => 17, :apply_n => 352, :admin_n => 70, :entry_n => 64, :college_delay_n => 24, :college_student_n => 3602)
+ElementsEdu.create!(:evaluate_edu_id => 3, :evaluate_staff_id => 3, :evaluate_life_id => 3, :faculty_student_n => 300, :faculty_teacher_n => 37, :apply_n => 300, :admin_n => 40, :entry_n => 194, :college_delay_n => 128, :college_student_n => 2020)
+ElementsEdu.create!(:evaluate_edu_id => 4, :evaluate_staff_id => 4, :evaluate_life_id => 4, :faculty_student_n => 1230, :faculty_teacher_n => 67, :apply_n => 900, :admin_n => 200, :entry_n => 93, :college_delay_n => 48, :college_student_n => 3003)
 
 ScrapeStaff.create!(:evaluate_staff_id => 1)
 ScrapeStaff.create!(:evaluate_staff_id => 2)
@@ -122,3 +122,6 @@ EvaluateEdu.update_all_susp_drop
 
 EvaluateStaff.update_all_salary_staff
 EvaluateStaff.update_all_teachers_diversity
+EvaluateStaff.update_all_teachers_gender
+
+EvaluateLife.update_all_region_diversity

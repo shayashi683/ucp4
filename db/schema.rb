@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "evaluate_staff_id"
+    t.integer "evaluate_life_id"
   end
 
   create_table "elements_lives", force: :cascade do |t|
@@ -220,6 +221,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
   add_foreign_key "colleges_faculties", "colleges", name: "colleges_faculties_college_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "colleges_faculties", "faculties", name: "colleges_faculties_faculty_id_fkey"
   add_foreign_key "elements_edus", "evaluate_edus", name: "elements_edus_evaluste_edu_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "elements_edus", "evaluate_lives", name: "elements_edus_evaluate_life_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_edus", "evaluate_staffs", name: "elements_edus_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_lives", "evaluate_lives", name: "elements_lives_evaluate_life_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "elements_staffs", "evaluate_staffs", name: "elements_staffs_evaluate_staff_id_fkey", on_update: :cascade, on_delete: :cascade
