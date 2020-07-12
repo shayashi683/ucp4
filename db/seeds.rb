@@ -124,5 +124,13 @@ EvaluateStaff.update_all_salary_staff
 EvaluateStaff.update_all_teachers_diversity
 EvaluateStaff.update_all_teachers_gender
 EvaluateStaff.update_all_repu_teacher
+EvaluateStaff.update_all_outcome_staff
+
+EvaluateFacility.update_all_facility_repu
+
+EvaluateInternational.update_all_facility_repu
+EvaluateInternational.update_all_life_repu
 
 EvaluateLife.update_all_region_diversity
+
+EvaluateReview.update_all_total_repu

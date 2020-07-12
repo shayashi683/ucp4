@@ -13,5 +13,11 @@ class EvaluateLife < ApplicationRecord
        100 - (100 * elements_life.the_region_student_n/elements_edu.faculty_student_n)
     end
 
+    def self.update_all_life_repu
+        all.each do |evaluate_life|
+            evaluate_life.update(outcome_staff: evaluate_life.scrape_life.scrape_repu_life)
+        end
+    end
+
 
 end

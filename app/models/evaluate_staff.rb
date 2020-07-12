@@ -34,7 +34,13 @@ class EvaluateStaff < ApplicationRecord
 
     def self.update_all_repu_teacher
         all.each do |evaluate_staff|
-            evaluate_staff.update(repu_teacher: evaluate_staff.scrape_staff.scrape_repu_teacher.to_f)
+            evaluate_staff.update(repu_teacher: evaluate_staff.scrape_staff.scrape_repu_teacher)
+        end
+    end
+
+    def self.update_all_outcome_staff
+        all.each do |evaluate_staff|
+            evaluate_staff.update(outcome_staff: evaluate_staff.scrape_teacher_outcome.scrape_outcome_teacher)
         end
     end
  
