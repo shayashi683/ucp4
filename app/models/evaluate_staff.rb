@@ -32,4 +32,10 @@ class EvaluateStaff < ApplicationRecord
         self.elements_staff.faculty_female_teacher_n * 100/ self.elements_edu.faculty_teacher_n
     end
 
+    def self.update_all_repu_teacher
+        all.each do |evaluate_staff|
+            evaluate_staff.update(repu_teacher: evaluate_staff.scrape_staff.scrape_repu_teacher.to_f)
+        end
+    end
+ 
 end
