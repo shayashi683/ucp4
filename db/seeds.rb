@@ -45,10 +45,10 @@ EvaluateCost.create!(:colleges_faculty_id => 2, :tuition => 12, :employment_rate
 EvaluateCost.create!(:colleges_faculty_id => 3, :tuition => 0.5, :employment_rate => 76.0, :scholarship => 1.5)
 EvaluateCost.create!(:colleges_faculty_id => 4, :tuition => 9.0, :employment_rate => 88.8, :scholarship => 2.5)
 
-EvaluateStaff.create!(:colleges_faculty_id => 1, :repu_teacher => 4.4, :study_budget => 20.0)
-EvaluateStaff.create!(:colleges_faculty_id => 2, :repu_teacher => 3.4, :study_budget => 40.0)
-EvaluateStaff.create!(:colleges_faculty_id => 3, :repu_teacher => 1.4, :study_budget => 30.0)
-EvaluateStaff.create!(:colleges_faculty_id => 4, :repu_teacher => 7.4, :study_budget => 25.0)
+EvaluateStaff.create!(:colleges_faculty_id => 1, :study_budget => 20.0)
+EvaluateStaff.create!(:colleges_faculty_id => 2, :study_budget => 40.0)
+EvaluateStaff.create!(:colleges_faculty_id => 3, :study_budget => 30.0)
+EvaluateStaff.create!(:colleges_faculty_id => 4, :study_budget => 25.0)
 
 EvaluateFacility.create!(:colleges_faculty_id => 1, :facility_expenditure => 20, :institution_expenditure => 30, :own_books => 20)
 EvaluateFacility.create!(:colleges_faculty_id => 2, :facility_expenditure => 14, :institution_expenditure => 44, :own_books => 50)
@@ -75,45 +75,45 @@ ElementsEdu.create!(:evaluate_edu_id => 2, :evaluate_staff_id => 2, :evaluate_li
 ElementsEdu.create!(:evaluate_edu_id => 3, :evaluate_staff_id => 3, :evaluate_life_id => 3, :faculty_student_n => 300, :faculty_teacher_n => 37, :apply_n => 300, :admin_n => 40, :entry_n => 194, :college_delay_n => 128, :college_student_n => 2020)
 ElementsEdu.create!(:evaluate_edu_id => 4, :evaluate_staff_id => 4, :evaluate_life_id => 4, :faculty_student_n => 1230, :faculty_teacher_n => 67, :apply_n => 900, :admin_n => 200, :entry_n => 93, :college_delay_n => 48, :college_student_n => 3003)
 
-ScrapeStaff.create!(:evaluate_staff_id => 1)
-ScrapeStaff.create!(:evaluate_staff_id => 2)
-ScrapeStaff.create!(:evaluate_staff_id => 3)
-ScrapeStaff.create!(:evaluate_staff_id => 4)
+ScrapeStaff.create!(:evaluate_staff_id => 1, :scrape_repu_teacher => 4.2)
+ScrapeStaff.create!(:evaluate_staff_id => 2, :scrape_repu_teacher => 4.0)
+ScrapeStaff.create!(:evaluate_staff_id => 3, :scrape_repu_teacher => 3.5)
+ScrapeStaff.create!(:evaluate_staff_id => 4, :scrape_repu_teacher => 2.7)
 
-ScrapeTeacherOutcome.create!(:evaluate_staff_id => 1)
-ScrapeTeacherOutcome.create!(:evaluate_staff_id => 2)
-ScrapeTeacherOutcome.create!(:evaluate_staff_id => 3)
-ScrapeTeacherOutcome.create!(:evaluate_staff_id => 4)
+ScrapeTeacherOutcome.create!(:evaluate_staff_id => 1, :scrape_outcome_teacher => 20.2)
+ScrapeTeacherOutcome.create!(:evaluate_staff_id => 2, :scrape_outcome_teacher => 15.5)
+ScrapeTeacherOutcome.create!(:evaluate_staff_id => 3, :scrape_outcome_teacher => 24.4)
+ScrapeTeacherOutcome.create!(:evaluate_staff_id => 4, :scrape_outcome_teacher => 19.9)
 
 ElementsStaff.create!(:evaluate_staff_id => 1, :teacher_expense => 17600, :staff_expense => 15500, :college_teacher_n => 400, :college_staff_n => 374, :faculty_foreign_teacher_n => 3, :faculty_female_teacher_n => 4)
 ElementsStaff.create!(:evaluate_staff_id => 2, :teacher_expense => 7200, :staff_expense => 4500, :college_teacher_n => 67, :college_staff_n => 34, :faculty_foreign_teacher_n => 5, :faculty_female_teacher_n => 6)
 ElementsStaff.create!(:evaluate_staff_id => 3, :teacher_expense => 12300, :staff_expense => 6900, :college_teacher_n => 99, :college_staff_n => 80, :faculty_foreign_teacher_n =>16, :faculty_female_teacher_n => 10)
 ElementsStaff.create!(:evaluate_staff_id => 4, :teacher_expense => 9900, :staff_expense => 9000, :college_teacher_n => 80, :college_staff_n => 99, :faculty_foreign_teacher_n => 8, :faculty_female_teacher_n => 8)
 
-ScrapeFacility.create!(:evaluate_facility_id => 1)
-ScrapeFacility.create!(:evaluate_facility_id => 2)
-ScrapeFacility.create!(:evaluate_facility_id => 3)
-ScrapeFacility.create!(:evaluate_facility_id => 4)
+ScrapeFacility.create!(:evaluate_facility_id => 1, :scrape_repu_facility => 3.4)
+ScrapeFacility.create!(:evaluate_facility_id => 2, :scrape_repu_facility => 4.4)
+ScrapeFacility.create!(:evaluate_facility_id => 3, :scrape_repu_facility => 5.0)
+ScrapeFacility.create!(:evaluate_facility_id => 4, :scrape_repu_facility => 3.4)
 
-ScrapeThe.create!(:evaluate_international_id => 1)
-ScrapeThe.create!(:evaluate_international_id => 2)
-ScrapeThe.create!(:evaluate_international_id => 3)
-ScrapeThe.create!(:evaluate_international_id => 4)
+ScrapeThe.create!(:evaluate_international_id => 1, :scrape_the => 3.0)
+ScrapeThe.create!(:evaluate_international_id => 2, :scrape_the => 3.6)
+ScrapeThe.create!(:evaluate_international_id => 3, :scrape_the => 4.4)
+ScrapeThe.create!(:evaluate_international_id => 4, :scrape_the => 4.7)
 
 ElementsLife.create!(:evaluate_life_id => 1, :the_region_student_n => 30,:female_student_n => 60)
 ElementsLife.create!(:evaluate_life_id => 2, :the_region_student_n => 20,:female_student_n => 30)
 ElementsLife.create!(:evaluate_life_id => 3, :the_region_student_n => 26,:female_student_n => 24)
 ElementsLife.create!(:evaluate_life_id => 4, :the_region_student_n => 40,:female_student_n => 55)
 
-ScrapeLife.create!(:evaluate_life_id => 1)
-ScrapeLife.create!(:evaluate_life_id => 2)
-ScrapeLife.create!(:evaluate_life_id => 3)
-ScrapeLife.create!(:evaluate_life_id => 4)
+ScrapeLife.create!(:evaluate_life_id => 1, :scrape_repu_life => 3.3)
+ScrapeLife.create!(:evaluate_life_id => 2, :scrape_repu_life => 3.6)
+ScrapeLife.create!(:evaluate_life_id => 3, :scrape_repu_life => 4.4)
+ScrapeLife.create!(:evaluate_life_id => 4, :scrape_repu_life => 3.0)
 
-ScrapeReview.create!(:evaluate_review_id => 1)
-ScrapeReview.create!(:evaluate_review_id => 2)
-ScrapeReview.create!(:evaluate_review_id => 3)
-ScrapeReview.create!(:evaluate_review_id => 4)
+ScrapeReview.create!(:evaluate_review_id => 1, :scrape_repu_review => 4.5)
+ScrapeReview.create!(:evaluate_review_id => 2, :scrape_repu_review => 4.2)
+ScrapeReview.create!(:evaluate_review_id => 3, :scrape_repu_review => 3.3)
+ScrapeReview.create!(:evaluate_review_id => 4, :scrape_repu_review => 4.9)
 
 EvaluateEdu.update_all_ratio_st
 EvaluateEdu.update_all_competition_rate
@@ -123,5 +123,6 @@ EvaluateEdu.update_all_susp_drop
 EvaluateStaff.update_all_salary_staff
 EvaluateStaff.update_all_teachers_diversity
 EvaluateStaff.update_all_teachers_gender
+EvaluateStaff.update_all_repu_teacher
 
 EvaluateLife.update_all_region_diversity

@@ -155,7 +155,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
 
   create_table "evaluate_staffs", force: :cascade do |t|
     t.integer "colleges_faculty_id"
-    t.integer "repu_teacher"
+    t.decimal "repu_teacher"
     t.decimal "salary_staff"
     t.decimal "outcome_staff"
     t.decimal "study_budget"

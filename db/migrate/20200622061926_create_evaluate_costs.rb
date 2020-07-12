@@ -5,7 +5,7 @@ class CreateEvaluateCosts < ActiveRecord::Migration[5.2]
       t.integer :tuition
       t.integer :employment_rate
       t.integer :scholarship
-      t.decimal :cost_grade
+      t.numeric :cost_grade
 
       t.timestamps
     end

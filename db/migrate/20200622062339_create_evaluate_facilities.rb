@@ -5,8 +5,8 @@ class CreateEvaluateFacilities < ActiveRecord::Migration[5.2]
       t.integer :facility_expenditure
       t.integer :institution_expenditure
       t.integer :own_books
-      t.decimal :facility_repu
-      t.decimal :facility_grade
+      t.numeric :facility_repu
+      t.numeric :facility_grade
 
       t.timestamps
     end
