@@ -5,7 +5,6 @@ class CreateRankings < ActiveRecord::Migration[5.2]
       t.integer :established_year
       t.text :place
       t.numeric :total_grade
-      t.numeric :cost
       t.numeric :center_point
 
       t.timestamps

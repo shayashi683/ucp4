@@ -177,7 +177,6 @@ ActiveRecord::Schema.define(version: 2020_06_29_052816) do
     t.integer "established_year"
     t.text "place"
     t.decimal "total_grade"
-    t.decimal "cost"
     t.decimal "center_point"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
