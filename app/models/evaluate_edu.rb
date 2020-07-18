@@ -1,7 +1,4 @@
 class EvaluateEdu < ApplicationRecord
-
-    require "daru"
-    
     belongs_to :assessment, optional: true
     has_one :elements_edu
 
@@ -41,6 +38,12 @@ class EvaluateEdu < ApplicationRecord
         self.elements_edu.college_delay_n / self.elements_edu.college_student_n
     end
 
+
+
+
+
+
+
     def self.update_all_education_grade
         all.each do |evaluate_edu|
             evaluate_edu.update(education_grade: evaluate_edu.calc_curriculum_points(evaluate_edu))
@@ -49,23 +52,30 @@ class EvaluateEdu < ApplicationRecord
         def mean(array)
             array = array.inject(0) { |sum, x| sum += x } / array.size.to_f
         end
-
         def standard_deviation(array)
             m = mean(array)
             variance = array.inject(0) { |variance, x| variance += (x - m) ** 2 } 
-            standard_deviation = Math.sqrt(variance/(array.size-1))
+            standard_deviation = Math.sqrt(variance/(array.size))
 
             # Round floating point to 4 decimals
             format = "%0.4f"
             return format % standard_deviation
         end
+        def zscore(array)
+            stdev = standard_deviation(array)
+            m = mean(array)
+            zscore = array.inject(0){ |v| (v - m)}/stdev.to_i 
 
-        def cp(cp)
-            @cp = EvaluateEdu.pluck(:curriculum_points)
+            # Round floating point to 4 decimals
+            format = "%0.4f"
+            return format % zscore
         end
 
     def calc_curriculum_points(evaluate_edu)
-        self.standard_deviation(@cp)
-    end
+    self.zscore(EvaluateEdu.pluck(:curriculum_points))
+end
     
+
+
+
 end
