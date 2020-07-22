@@ -50,7 +50,7 @@ class EvaluateEdu < ApplicationRecord
         end
      end
         def mean(array)
-            array = array.sum.to_f/array.size
+            array = array.sum/array.size
         end
         def standard_deviation(array)
             m = mean(array)
@@ -60,23 +60,12 @@ class EvaluateEdu < ApplicationRecord
         def zscore(array)
             stdev = standard_deviation(array)
             m = mean(array)
-            zscore = array.map{ |v| ((v - m)/stdev).to_f.round(4) }
+            zscore = array.map{ |v| ((v - m)/stdev).round(4)}
         end
 
     def calc_education_grade(evaluate_edu)
-        self.zscore(EvaluateEdu.pluck(:curriculum_points))*0.25 
-        + self.zscore(EvaluateEdu.pluck(:relationwc))*0.075 
-        + self.zscore(EvaluateEdu.pluck(:raitio_st))*0.15 
-        + self.zscore(EvaluateEdu.pluck(:competition_rate))*0.1 
-        + self.zscore(EvaluateEdu.pluck(:ratio_adm))*0.075 
-        + self.zscore(EvaluateEdu.pluck(:susp_drop))*0.075 
-        + self.zscore(EvaluateEdu.pluck(:income))*0.09 
-        + self.zscore(EvaluateEdu.pluck(:qualification))*0.085 
-        + self.zscore(EvaluateEdu.pluck(:study_budget))*0.05 
-        + self.zscore(EvaluateEdu.pluck(:activity))*0.05  
+        self.zscore(EvaluateEdu.pluck(:curriculum_points))
     end
-    
-
 
 
 end
