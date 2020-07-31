@@ -61,10 +61,11 @@ class EvaluateEdu < ApplicationRecord
             stdev = standard_deviation(array)
             m = mean(array)
             zscore = array.map{ |v| ((v - m)/stdev).round(4)}
+            p zscore
         end
 
     def calc_education_grade(evaluate_edu)
-        self.zscore(EvaluateEdu.pluck(:curriculum_points))
+        self.zscore(evaluate_edu.to_a.pluck(:curriculum_points))
     end
 
 
