@@ -1,4 +1,4 @@
 class Ranking < ApplicationRecord
     belongs_to :colleges_faculty
-    has_many :assessments
+    has_one :assessment
 end

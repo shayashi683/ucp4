@@ -1,3 +1,3 @@
 class ElementsLife < ApplicationRecord
-    belongs_to :elements_life
+    belongs_to :elements_life, optional: true
 end

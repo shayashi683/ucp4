@@ -7,8 +7,8 @@ class CreateEvaluateInternationals < ActiveRecord::Migration[5.2]
       t.integer :faculty_partnerschool
       t.integer :exchangestudents
       t.integer :accepted_programs
-      t.decimal :the_assess
-      t.decimal :international_grade
+      t.numeric :the_assess
+      t.numeric :international_grade
 
       t.timestamps
     end

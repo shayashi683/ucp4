@@ -1,4 +1,4 @@
 class RankingsController < ApplicationController
-    def college_faculty_1  
+    def top  
     end
 end

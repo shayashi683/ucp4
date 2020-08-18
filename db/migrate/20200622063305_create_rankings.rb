@@ -4,9 +4,8 @@ class CreateRankings < ActiveRecord::Migration[5.2]
       t.references :colleges_faculty, foreign_key: true
       t.integer :established_year
       t.text :place
-      t.decimal :total_grade
-      t.decimal :cost
-      t.decimal :center_point
+      t.numeric :total_grade
+      t.numeric :center_point
 
       t.timestamps
     end

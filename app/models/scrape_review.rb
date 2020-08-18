@@ -1,3 +1,3 @@
 class ScrapeReview < ApplicationRecord
-    belongs_to :evaluate_review
+    belongs_to :evaluate_review, optional: true
 end
